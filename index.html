@@ -11,7 +11,7 @@
     <!-- CSS Video -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Permanent+Marker|Poiret+One" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -32,8 +32,8 @@
             font-family: 'Montserrat', sans-serif;
         }
         .coming-info{
-            font-family: 'Montserrat', sans-serif;     
-            font-size: 1em;       
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
         }
 
         #day {
@@ -96,14 +96,58 @@
                                 <span class="small">Segundos</span>
                             </p>
                         </div>
+                        <div class="col-md-12 text-center">
+                          <button data-button="open "class="btnOpenModal"><a href="#popup">Saiba mais</a></button>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <video autoplay loop class="fillWidth">
                 <source src="videos/countdown/count.mov" type="video/mp4" />
             </video>
         </div>
     </div>
+
+    <section class="popup" id="popup">
+
+      <figure class="popup__album">
+
+        <img  class="popup__albumPhoto" src="imagens/photoModal2.jpeg">
+
+      </figure>
+
+      <section class="popup__info">
+
+        <article class="popup__about">
+
+          <button data-button="close" class="popup__close"><a href="index.html">X</a></button>
+
+          <img src="imagens/logoTaurus.jpeg">
+
+          <div class="popup__phrase">
+            <p class="popup__phraseText">
+              "Homens não precisam de vários escolhas, mas da escolha certa."
+            </p>
+            <p>
+              Sid Mashburn
+            </p>
+          </div>
+
+        </article>
+
+        <form class="popup__email">
+
+          <input class="popup__inputEmail" type="email" placeholder="Enter e-mail...">
+          <button class="popup__inputButton" type="submit">Inscrever-se</button>
+          <p class="popup__msgSpam">Não enviaremos spam :)</p>
+
+        </form>
+
+      </section>
+
+    </section>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

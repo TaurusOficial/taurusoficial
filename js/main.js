@@ -88,7 +88,7 @@ var x = setInterval(function () {
     // Output the result in seconds element
     document.getElementById("seconds").innerHTML = seconds;
 
-    // If the count down is over, write some text 
+    // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
