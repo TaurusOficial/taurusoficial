@@ -18,18 +18,38 @@ $(document).ready(function () {
     $("#inscrever").click(function () {
         var emailV = $('#email').val();
         if (emailV.trim() != '' && emailV.trim() != undefined) {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log('ok');
-                } else {
-                    $('#email').val('');
-                    $('#msgSpam').html('<br /><br /><b class="text-success">Inscrito com sucesso!<b/>');
-                }
-            };
-            xhttp.open("POST", "http://2csistemas.com.br/email/send.php", true);
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send("email=" + emailV);
+            var f = document.createElement('form');
+            f.action='http://2csistemas.com.br/email/send.php';
+            f.method='POST';
+            //f.target='_blank';
+            //f.enctype="multipart/form-data"
+            
+            var k=document.createElement('input');
+            k.type='hidden';k.name='email';
+            k.value=emailV;
+            f.appendChild(k);
+            
+            
+            
+            //var z=document.getElementById("FileNameId")
+            //z.setAttribute("name", "IDProof");
+            //z.setAttribute("id", "IDProof");
+            //f.appendChild(z);
+            
+            document.body.appendChild(f);
+            f.submit()
+            // var xhttp = new XMLHttpRequest();
+            // xhttp.onreadystatechange = function () {
+            //     if (this.readyState == 4 && this.status == 200) {
+            //         console.log('ok');
+            //     } else {
+            //         $('#email').val('');
+            //         $('#msgSpam').html('<br /><br /><b class="text-success">Inscrito com sucesso!<b/>');
+            //     }
+            // };
+            // xhttp.open("POST", "http://2csistemas.com.br/email/send.php", true);
+            // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // xhttp.send("email=" + emailV);
         }
     });
 });
