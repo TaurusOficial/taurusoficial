@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    $('#video').get(0).play();
     scaleVideoContainer();
 
     initBannerVideoSize('.video-container .poster img');
@@ -12,7 +12,9 @@ $(document).ready(function () {
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
-
+    $(".popup__close").click(function () {
+        window.location.href = 'index.html';
+    });
     $("#inscrever").click(function () {
         var emailV = $('#email').val();
         if (emailV.trim() != '' && emailV.trim() != undefined) {
