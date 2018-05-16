@@ -40,3 +40,43 @@
 .video-container video.fillWidth {
     width: 100%;
 }
+
+.coming-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    padding-top: 5%;
+}
+
+.coming-middle {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.coming-bottom {
+    font-family: 'Montserrat', sans-serif;
+}
+.coming-info{
+    font-family: 'Montserrat', sans-serif;     
+    font-size: 1em;       
+}
+
+#day {
+    font-size: 6em;
+}
+
+#hours {
+    padding-top: 250px;
+    font-size: 6em;
+}
+
+#minutes {
+    font-size: 6em;
+}
+
+#seconds {
+    font-size: 6em;
+}
+
+hr {
+    width: 25%;
+    background-color: white;
+}
