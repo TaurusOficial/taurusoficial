@@ -4,7 +4,10 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Responsive -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <!-- Desktop Version -->
+    <meta name="viewport" content="width=900">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
@@ -14,50 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Permanent+Marker|Poiret+One" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagens/android-chrome-256x256.png">
     <title>Taurus Oficial</title>
-    <style>
-        .coming-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 5em;
-            padding-top: 5%;
-        }
-
-        .coming-middle {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .coming-bottom {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .coming-info{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1em;
-        }
-
-        #day {
-            font-size: 6em;
-        }
-
-        #hours {
-            padding-top: 250px;
-            font-size: 6em;
-        }
-
-        #minutes {
-            font-size: 6em;
-        }
-
-        #seconds {
-            font-size: 6em;
-        }
-
-        hr {
-            width: 25%;
-            background-color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -67,13 +29,13 @@
                 <div class="container-fluid text-left text-white">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="imagens/logo_transparente.png" alt="Taurus Oficial" width="300em">
+                            <img src="imagens/logoC_semfundo.png" alt="Taurus Oficial" width="200em">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <p class="coming-title">COMING SOON</p>
-                            <!-- <p class="coming-info">Uma loja novinha em folha está quase saindo do forno, siga-nos no Instagram e tenha acesso as últimas novidades da Taurus.</p> -->
+                            <!-- <p class="coming-info"></p> -->
                             <hr class="line" />
                         </div>
                     </div>
@@ -97,7 +59,11 @@
                             </p>
                         </div>
                         <div class="col-md-12 text-center">
-                          <button data-button="open "class="btnOpenModal"><a href="#popup">Saiba mais</a></button>
+                            <a href="#popup">
+                                <button data-button="open " class="btnOpenModal">
+                                    <b>FIQUE POR DENTRO</b>
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -110,43 +76,57 @@
     </div>
 
     <section class="popup" id="popup">
+        <section class="popup__info">
 
-      <figure class="popup__album">
+            <article class="popup__about">
 
-        <img  class="popup__albumPhoto" src="imagens/photoModal2.jpeg">
+                <button data-button="close" class="popup__close">
+                    <a href="index.html">X</a>
+                </button>
+                <img src="imagens/logoB_semfundo.png" alt="Taurus Oficial">
+                <div class="popup__phrase">
+                    <p class="popup__phraseText">
+                        Uma loja novinha em folha está quase saindo do forno, siga-nos no
+                        <b>
+                            <i>Instagram</i>
+                        </b> ou inscreva-se logo abaixo, e tenha acesso às últimas novidades da
+                        <b>Taurus©</b>.
+                    </p>
+                    <p>
+                        Equipe Taurus,
+                    </p>
+                </div>
 
-      </figure>
+            </article>
 
-      <section class="popup__info">
+            <form class="popup__email">
 
-        <article class="popup__about">
+                <input id="email" class="popup__inputEmail" type="email" placeholder="Seu e-mail...">
+                <button id="inscrever" class="popup__inputButton" type="button">Inscrever-se</button>
+                <p class="popup__msgSpam" id="msgSpam">Não enviaremos spam :)</p>
 
-          <button data-button="close" class="popup__close"><a href="index.html">X</a></button>
+            </form>
 
-          <img src="imagens/logoTaurus.jpeg">
-
-          <div class="popup__phrase">
-            <p class="popup__phraseText">
-              "Homens não precisam de vários escolhas, mas da escolha certa."
-            </p>
-            <p>
-              Sid Mashburn
-            </p>
-          </div>
-
-        </article>
-
-        <form class="popup__email">
-
-          <input class="popup__inputEmail" type="email" placeholder="Enter e-mail...">
-          <button class="popup__inputButton" type="submit">Inscrever-se</button>
-          <p class="popup__msgSpam">Não enviaremos spam :)</p>
-
-        </form>
-
-      </section>
+        </section>
 
     </section>
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("#inscrever").click(function () {
+                var email = $('#email').val();
+                if (email.trim() != '' && email.trim() != undefined) {
+                    $.post("http://2csistemas.com.br/email/send.php",
+                        {
+                            email: email
+                        },
+                        function (data, status) {
+                            console.log("Data: " + data + "\nStatus: " + status);
+                        });
+                }
+            });
+        });
+    </script> -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
     scaleVideoContainer();
 
@@ -6,26 +6,43 @@ $( document ).ready(function() {
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         scaleVideoContainer();
         scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
 
+    $("#inscrever").click(function () {
+        var emailV = $('#email').val();
+        if (emailV.trim() != '' && emailV.trim() != undefined) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log('ok');
+                } else {
+                    $('#email').val('');
+                    $('#msgSpam').html('<br /><br /><b class="text-success">Inscrito com sucesso!<b/>');
+                }
+            };
+            xhttp.open("POST", "http://2csistemas.com.br/email/send.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("email=" + emailV);
+        }
+    });
 });
 
 function scaleVideoContainer() {
 
     var height = $(window).height() + 5;
     var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height',unitHeight);
+    $('.homepage-hero-module').css('height', unitHeight);
 
 }
 
-function initBannerVideoSize(element){
+function initBannerVideoSize(element) {
 
-    $(element).each(function(){
+    $(element).each(function () {
         $(this).data('height', $(this).height());
         $(this).data('width', $(this).width());
     });
@@ -34,24 +51,24 @@ function initBannerVideoSize(element){
 
 }
 
-function scaleBannerVideoSize(element){
+function scaleBannerVideoSize(element) {
 
     var windowWidth = $(window).width(),
-    windowHeight = $(window).height() + 5,
-    videoWidth,
-    videoHeight;
+        windowHeight = $(window).height() + 5,
+        videoWidth,
+        videoHeight;
 
     // console.log(windowHeight);
 
-    $(element).each(function(){
-        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+    $(element).each(function () {
+        var videoAspectRatio = $(this).data('height') / $(this).data('width');
 
         $(this).width(windowWidth);
 
-        if(windowWidth < 1000){
+        if (windowWidth < 1000) {
             videoHeight = windowHeight;
             videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+            $(this).css({ 'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px' });
 
             $(this).width(videoWidth).height(videoHeight);
         }
