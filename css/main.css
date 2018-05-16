@@ -239,3 +239,21 @@ hr {
   font-size: 1em;
   font-weight: bold;
 }
+#insta{
+  text-decoration: none;
+  color: black;
+  font-family: 'Oleo Script', cursive;
+  font-weight: 100 !important;
+  font-size: larger;
+
+}
+#insta:hover{
+  text-decoration: none;
+  color: gray;
+}
+#taurus{
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  font-size: larger;
+
+}
