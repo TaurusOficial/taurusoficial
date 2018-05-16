@@ -124,7 +124,8 @@ body{
 }
 .popup__info{
 	height: 630px;
-	background: #fff;
+  background: #fff;
+  font-size: 1.2em
 }
 .popup__about{
 	height: 350px;
