@@ -14,12 +14,17 @@
     <!-- CSS Video -->
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Permanent+Marker|Poiret+One|Oleo+Script" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
     <link rel="icon" type="image/png" href="imagens/android-chrome-256x256.png">
 
 
+=======
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagens/android-chrome-256x256.png">
+>>>>>>> testeModal
     <title>Taurus Oficial</title>
 </head>
 
@@ -29,14 +34,20 @@
             <div class="filter">
                 <div class="container-fluid text-left text-white">
                     <div class="row">
+<<<<<<< HEAD
                         <div class="col-12">
                             <img src="imagens/logoC_semfundo.png" alt="Taurus Oficial" width="250em">
+=======
+                        <div class="col-md-12">
+                            <img src="imagens/logoC_semfundo.png" alt="Taurus Oficial" width="200em">
+>>>>>>> testeModal
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
                             <p class="coming-title">COMING SOON</p>
-                            <!-- <p class="coming-info">Uma loja novinha em folha está quase saindo do forno, siga-nos no Instagram e tenha acesso as últimas novidades da Taurus.</p> -->
+                            <p class="coming-info">ESTAMOS EM CONSTRUÇÃO
+                            </p>
                             <hr class="line" />
                         </div>
                     </div>
@@ -59,14 +70,66 @@
                                 <span class="small">Segundos</span>
                             </p>
                         </div>
+                        <div class="col-md-12 text-center">
+                            <a href="#popup">
+                                <button data-button="open " class="btnOpenModal">
+                                    <b>FIQUE POR DENTRO</b>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <video autoplay muted loop class="fillWidth" id="video">
                 <source src="videos/countdown/count.mov" type="video/mp4" />
+=======
+
+            <video autoplay muted loop class="fillWidth" id="video">
+                <source src="videos/BullDozer/WEBM/Bulldozer.webm" type="video/webm" />
+>>>>>>> testeModal
             </video>
         </div>
     </div>
+
+    <section class="popup" id="popup">
+        <section class="popup__info">
+
+            <article class="popup__about">
+                <button data-button="close" class="popup__close">
+                    X
+                </button>
+                <img src="imagens/logoB_semfundo.png" alt="Taurus Oficial">
+                <div class="popup__phrase">
+                    <p class="popup__phraseText">
+                        Uma loja novinha em folha está quase saindo do forno, siga-nos no
+                        <a id="insta" href="https://www.instagram.com/taurus_acessorios/" target="_blank">
+                            <i>Instagram</i>
+                        </a>
+                        ou inscreva-se logo abaixo, e tenha acesso às últimas novidades da
+                        <span id="taurus">Taurus©</span>
+                    </p>
+                    <p>
+                        Equipe
+                        <span id="taurus">Taurus</span>
+                        ,
+                    </p>
+                </div>
+
+            </article>
+
+            <form class="popup__email">
+
+                <input id="email" class="popup__inputEmail" type="email" placeholder="Seu e-mail...">
+                <button id="inscrever" class="popup__inputButton" type="button">Inscrever-se</button>
+                <p class="popup__msgSpam" id="msgSpam">Não enviaremos spam :)</p>
+
+            </form>
+
+        </section>
+
+    </section>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

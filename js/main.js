@@ -12,7 +12,26 @@ $(document).ready(function () {
         scaleBannerVideoSize('.video-container .filter');
         scaleBannerVideoSize('.video-container video');
     });
-
+    $(".popup__close").click(function () {
+        window.location.href = 'index.html';
+    });
+    $("#inscrever").click(function () {
+        var emailV = $('#email').val();
+        if (emailV.trim() != '' && emailV.trim() != undefined) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log('ok');
+                } else {
+                    $('#email').val('');
+                    $('#msgSpam').html('<br /><br /><b class="text-success">Inscrito com sucesso!<b/>');
+                }
+            };
+            xhttp.open("POST", "http://2csistemas.com.br/email/send.php", true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("email=" + emailV);
+        }
+    });
 });
 
 function scaleVideoContainer() {
@@ -88,7 +107,7 @@ var x = setInterval(function () {
     // Output the result in seconds element
     document.getElementById("seconds").innerHTML = seconds;
 
-    // If the count down is over, write some text 
+    // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
