@@ -37,7 +37,7 @@ $(document).ready(function () {
             // //f.appendChild(z);
             
             // document.body.appendChild(f);
-            f.submit()
+            // f.submit()
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
