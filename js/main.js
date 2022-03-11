@@ -101,7 +101,7 @@ function scaleBannerVideoSize(element) {
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 01, 2018 00:00:00").getTime();
+var countDownDate = new Date("Sep 30, 2023 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
